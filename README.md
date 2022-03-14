@@ -24,7 +24,13 @@ cd eksctl/00-simple-cluster
 eksctl create cluster -f cluster.yaml
 ```
 
-*** The cluster build process will take around 15-20mins ***
+#### The cluster build process will take around 15-20mins
+
+### check in AWS console
+
+```
+Search for EKS > Clusters
+
 
 
 
