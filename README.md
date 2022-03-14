@@ -30,6 +30,7 @@ eksctl create cluster -f cluster.yaml
 
 ```
 Search for EKS > Clusters
+```
 
 
 
