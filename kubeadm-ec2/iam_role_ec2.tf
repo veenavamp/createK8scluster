@@ -26,8 +26,13 @@ resource "aws_iam_role" "ec2_ssm_role" {
   }
 }
 
+resource "aws_iam_instance_profile" "ec2_profile" {
+  name = "ec2_ssm__profile"
+  role = aws_iam_role.ec2_ssm_role.name
+}
+
 resource "aws_iam_policy_attachment" "policy-attach" {
   name       = "policy-attachment"
-  roles      = aws_iam_role.ec2_ssm_role.name
+  roles      = [aws_iam_role.ec2_ssm_role.name]
   policy_arn = data.aws_iam_policy.ssmpolicy.arn
 }
