@@ -1,7 +1,8 @@
 resource "aws_instance" "master" {
   ami           = var.AMIS[var.AWS_REGION]
-  instance_type = "t2.micro"
+  instance_type = "t2.medium"
   #for_each      = data.aws_subnet_ids.selected.ids
+  iam_instance_profile = aws_iam_role.ec2_ssm_role.name
 
   # the VPC subnet
   subnet_id = tolist(data.aws_subnet_ids.public.ids)[0]
@@ -26,6 +27,7 @@ resource "aws_instance" "worker" {
   ami           = var.AMIS[var.AWS_REGION]
   instance_type = "t2.micro"
   #for_each      = data.aws_subnet_ids.selected.ids
+  iam_instance_profile = aws_iam_role.ec2_ssm_role.name
   
 
   # the VPC subnet
