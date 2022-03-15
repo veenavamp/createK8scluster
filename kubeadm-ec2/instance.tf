@@ -45,6 +45,7 @@ resource "aws_instance" "worker" {
     "kubernetes.io/cluster/kubeadm" = "owned"
     Role = "worker"
     type = "terraform"
+    created = "terraform"
   }
 }
 
