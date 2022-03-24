@@ -43,12 +43,6 @@ resource "aws_security_group" "minikube-worker-sg" {
     to_port = 22
     cidr_blocks = ["0.0.0.0/0"]
   }
-  ingress {
-    protocol = "udp"
-    from_port = 8472
-    to_port = 8472
-    security_groups = [aws_security_group.minikube-worker-sg.id]
-  }
   egress{
     protocol = "-1"
     from_port = 0

@@ -8,7 +8,7 @@ resource "aws_instance" "minikube" {
   subnet_id = tolist(data.aws_subnet_ids.public.ids)[0]
 
   # the security group
-  vpc_security_group_ids = [aws_security_group.allow-ssh.id,aws_security_group.Demo-kube-master-sg.id,aws_security_group.Demo-kube-mutual-sg.id]
+  vpc_security_group_ids = [aws_security_group.allow-ssh.id,aws_security_group.minikube-worker-sg.id]
 
   # the public SSH key
   key_name = aws_key_pair.mykeypair.key_name
