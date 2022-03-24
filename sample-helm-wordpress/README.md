@@ -1,5 +1,10 @@
 # Create Wordpress Site using Helm
 
+### Install helm on our workstation (windows/mac/linux)
+
+https://helm.sh/docs/intro/install/
+
+
 ### Add Helm repo in your workstation
 
 ```
