@@ -60,7 +60,7 @@ data "aws_subnet_ids" "private" {
 
 data "aws_vpc" "selected" {
   tags = {
-    Name = "*demo*"
+    Name = "Demo*"
   }
 }
 
