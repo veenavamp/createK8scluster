@@ -12,3 +12,20 @@ terraform plan
 terraform apply
 
 ssh -i mykey ubuntu@publicip in the output
+
+## Steps to create cluster using kubeadm
+
+### install docker engine 
+
+```
+https://docs.docker.com/engine/install/ubuntu/
+
+# install kubeadm
+
+https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
+
+# create cluster using kubeadm
+
+https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/
+
+```
