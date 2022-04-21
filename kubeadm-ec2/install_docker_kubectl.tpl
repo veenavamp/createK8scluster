@@ -9,7 +9,8 @@ apt-get install -yq \
     ca-certificates \
     curl \
     gnupg-agent \
-    software-properties-common
+    software-properties-common \
+    lsb-release
     
 
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
@@ -22,6 +23,7 @@ add-apt-repository \
 apt-get update
 
 apt-get install -yq docker-ce docker-ce-cli containerd.io
+
 
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 
