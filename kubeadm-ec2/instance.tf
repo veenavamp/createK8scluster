@@ -23,7 +23,7 @@ resource "aws_instance" "master" {
 }
 
 resource "aws_instance" "worker" {
-  count         = 2
+  count         = 1
   ami           = var.AMIS[var.AWS_REGION]
   instance_type = "t2.micro"
   #for_each      = data.aws_subnet_ids.selected.ids
