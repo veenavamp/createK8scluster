@@ -1,5 +1,7 @@
 #!/bin/bash 
 
+### install docker engine
+
 apt-get update
 apt-get install -y git wget
 
@@ -24,6 +26,7 @@ apt-get update
 
 apt-get install -yq docker-ce docker-ce-cli containerd.io
 
+### Install kubeadm
 
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 
@@ -34,10 +37,6 @@ EOF
 sudo apt-get update -y
 
 sudo apt-get install -y  kubelet kubeadm kubectl kubernetes-cni nfs-common
-
-# Install Docker Compose 
-sudo curl -L "https://github.com/docker/compose/releases/download/1.28.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
 
 
 sudo sysctl net.bridge.bridge-nf-call-iptables=1
