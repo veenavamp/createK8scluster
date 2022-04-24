@@ -36,7 +36,11 @@ EOF
 
 sudo apt-get update -y
 
-sudo apt-get install -y  kubelet kubeadm kubectl kubernetes-cni nfs-common
+sudo apt-get install -qy kubelet=1.21.3-00 kubectl=1.21.3-00 kubeadm=1.21.3-00
+sudo apt-mark hold kubelet kubeadm kubectl
+
+
+sudo apt-get install -y kubernetes-cni nfs-common
 
 
 sudo sysctl net.bridge.bridge-nf-call-iptables=1
