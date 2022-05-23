@@ -1,6 +1,6 @@
 resource "aws_instance" "master" {
   ami           = var.AMIS[var.AWS_REGION]
-  instance_type = "t2.medium"
+  instance_type = "t2.micro"
   #for_each      = data.aws_subnet_ids.selected.ids
   iam_instance_profile = aws_iam_instance_profile.ec2_profile.name
 
